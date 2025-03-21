@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "ai_backend": {
+      "main": "src/ai_backend/main.mo",
+      "type": "motoko"
+    },
+    "ai_frontend": {
+      "dependencies": ["ai_backend"],
+      "frontend": {
+        "entrypoint": "src/ai_frontend/src/index.jsx"
+      },
+      "source": ["src/ai_frontend/assets", "dist/ai_frontend/"],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "declarations": {
+  "ai_backend": {
+    "bindings": {
+      "javascript": "src/declarations/ai_backend"
+    }
+  }
+},
+  "version": 1
+}
